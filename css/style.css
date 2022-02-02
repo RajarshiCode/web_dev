@@ -1,0 +1,218 @@
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+/* css variables */
+/* :root{
+    --navbar-height: 59px;
+} */
+/* navigation bar */
+
+#navbar{
+    display: flex;
+    align-items: center;    
+    /* if we use justify content center then everything will come to th e center  */
+    /* justify-content: center; */
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 72%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.78;
+}
+
+/* navigation bar: logo and images */
+#logo{
+    margin: 0px 0px;
+}
+#logo img{
+    height: 100px;
+    margin: 15px 15px;   
+}
+/* navigation bar: list styling */
+
+#navbar ul{
+    display: flex;
+    /* after doing display flex we can have the home about-us contact-us in one line horizontally */    
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    /* if i have not given here the padding then padded area would have responded for the hover */
+}
+#navbar ul li a{
+    /* for the hover the padding i have given in the anchor tag of li since i want certain change so to be avail when the cursor is on the text not the padded area. */
+    display: block;
+    padding: 3px 22px; 
+    color: white;   
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;    
+}
+
+/* home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    background: url(../img/nav.png) no-repeat center center/cover;
+    /* background: url(../img/sp1.jpeg) no-repeat center center/cover; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 785px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.898;
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+/* Services Section */
+#services{
+    margin: 17px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid brown;
+    margin: 35px 55px;
+    padding: 20px 20px;
+    border-radius: 23px;
+    background-color: #fff9c0;
+    text-align: center;   
+}
+#services .box img{
+    height: 160px; 
+    margin: auto;   
+    display: block;
+}
+#services .box p{
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+/* client section */
+#client-section{
+    position: relative;
+    height: 344px;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url(../img/sp1.jpeg) no-repeat center center/cover ;
+    width: 100%;
+    height: 444px;
+    z-index: -1;
+    opacity: 0.5;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 34px;
+}
+#clients img{
+    height: 124px;
+}
+/* contact section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(../img/sp2.jpeg) no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;    
+}
+#contact-box input,
+#contact-box textarea{
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 9px 20px;    
+}
+/* utility Classes */
+.h-primary{
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+.h-secondary{
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 2.3rem;
+    padding: 12px;
+    text-align: center;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* .btn:hover{
+    background: transparent;
+    color: black;
+    font-size: 2.8rem;
+    font-style: bold;
+} */
+.center{
+    text-align: center;
+    margin-top: 100px;
+}
